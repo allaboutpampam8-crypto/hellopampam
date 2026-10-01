@@ -486,46 +486,53 @@ export default function Home() {
         {activeProject && (
           <div
             onClick={() => setActiveProject(null)}
-            className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/85 backdrop-blur-md animate-in fade-in duration-200"
+            className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 bg-black/85 backdrop-blur-md animate-in fade-in duration-200"
           >
             <div
               onClick={(e) => e.stopPropagation()}
-              className="relative w-full max-w-2xl max-h-[88vh] overflow-y-auto p-5 sm:p-8 rounded-2xl bg-neutral-900 border border-neutral-700/80 shadow-2xl space-y-5 sm:space-y-6"
+              className="relative w-full max-w-2xl max-h-[85vh] sm:max-h-[90vh] overflow-y-auto rounded-t-3xl sm:rounded-2xl bg-neutral-900 border border-neutral-700/80 shadow-2xl space-y-5 sm:space-y-6 pb-6 sm:pb-8"
             >
-              {/* Close Button */}
-              <button
-                type="button"
-                onClick={() => setActiveProject(null)}
-                className="absolute top-4 right-4 p-2 rounded-full bg-neutral-800/90 text-neutral-400 hover:text-white hover:bg-neutral-700 transition-colors z-20"
-                aria-label="Tutup modal"
-              >
-                <X className="w-5 h-5" />
-              </button>
-
-              {/* Modal Header */}
-              <div className="space-y-2 pr-10">
-                <div className="flex flex-wrap items-center gap-2">
-                  <span className="px-2.5 py-0.5 rounded-full text-xs font-semibold uppercase bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-                    {activeProject.categoryLabel}
-                  </span>
-                  {activeProject.status === "Coming Soon" ? (
-                    <span className="px-2.5 py-0.5 rounded-full text-xs font-bold uppercase bg-amber-500/10 text-amber-400 border border-amber-500/30 flex items-center gap-1.5">
-                      <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
-                      Status: Coming Soon
-                    </span>
-                  ) : (
-                    <span className="text-xs text-neutral-400">
-                      • Status: {activeProject.status}
-                    </span>
-                  )}
-                </div>
-                <h3 className="text-xl sm:text-3xl font-extrabold text-white leading-tight">
-                  {activeProject.title}
-                </h3>
-                <p className="text-xs sm:text-sm text-neutral-300 font-medium">
-                  {activeProject.tagline}
-                </p>
+              {/* Sticky Top Bar for Mobile & Desktop - Always Visible Close Button */}
+              <div className="sticky top-0 z-30 flex items-center justify-between px-5 sm:px-8 py-3.5 bg-neutral-900/95 backdrop-blur-md border-b border-neutral-800">
+                <span className="text-xs font-semibold text-neutral-400 uppercase tracking-wider">
+                  Detail Case Study
+                </span>
+                <button
+                  type="button"
+                  onClick={() => setActiveProject(null)}
+                  className="p-2 -mr-1 rounded-full bg-neutral-800 text-neutral-300 hover:text-white hover:bg-neutral-700 active:scale-95 transition-all shadow-md"
+                  aria-label="Tutup modal"
+                >
+                  <X className="w-5 h-5" />
+                </button>
               </div>
+
+              {/* Modal Body Content */}
+              <div className="px-5 sm:px-8 space-y-5 sm:space-y-6">
+                {/* Modal Header */}
+                <div className="space-y-2">
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="px-2.5 py-0.5 rounded-full text-xs font-semibold uppercase bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                      {activeProject.categoryLabel}
+                    </span>
+                    {activeProject.status === "Coming Soon" ? (
+                      <span className="px-2.5 py-0.5 rounded-full text-xs font-bold uppercase bg-amber-500/10 text-amber-400 border border-amber-500/30 flex items-center gap-1.5">
+                        <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
+                        Status: Coming Soon
+                      </span>
+                    ) : (
+                      <span className="text-xs text-neutral-400">
+                        • Status: {activeProject.status}
+                      </span>
+                    )}
+                  </div>
+                  <h3 className="text-xl sm:text-3xl font-extrabold text-white leading-tight">
+                    {activeProject.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-neutral-300 font-medium">
+                    {activeProject.tagline}
+                  </p>
+                </div>
 
               {/* Modal Image Mockup Banner */}
               {activeProject.imageUrl && (
@@ -615,6 +622,7 @@ export default function Home() {
                   Tutup
                 </button>
               </div>
+            </div>
             </div>
           </div>
         )}

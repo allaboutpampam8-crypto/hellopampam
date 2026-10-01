@@ -84,6 +84,7 @@ export default function Home() {
                 fill
                 className="object-contain"
                 priority
+                unoptimized
               />
             </div>
           </a>
@@ -812,6 +813,7 @@ export default function Home() {
               alt="SP Logo"
               fill
               className="object-contain opacity-75 hover:opacity-100 transition-opacity"
+              unoptimized
             />
           </div>
           <p>© 2026 Setyo Pambudi. Built with Next.js & Tailwind CSS.</p>

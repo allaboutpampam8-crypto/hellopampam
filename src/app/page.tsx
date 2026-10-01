@@ -76,9 +76,15 @@ export default function Home() {
       {/* Floating Navbar */}
       <header className="sticky top-4 z-40 max-w-5xl mx-auto px-4">
         <nav className="flex items-center justify-between px-5 sm:px-6 py-3 rounded-full border border-neutral-800/90 bg-neutral-900/80 backdrop-blur-xl shadow-xl shadow-black/50">
-          <a href="#" className="flex items-center gap-2.5 group">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-emerald-400 via-teal-400 to-cyan-400 flex items-center justify-center font-bold text-neutral-950 text-xs shadow-md shadow-emerald-500/20 group-hover:scale-105 transition-transform">
-              SP
+          <a href="#" className="flex items-center gap-3 group">
+            <div className="relative h-7 w-14 sm:h-8 sm:w-16 flex items-center justify-center group-hover:scale-105 transition-transform">
+              <Image
+                src="/logo.png"
+                alt="SP - Setyo Pambudi Logo"
+                fill
+                className="object-contain"
+                priority
+              />
             </div>
             <span className="font-semibold text-sm tracking-tight text-neutral-200 group-hover:text-white transition-colors">
               Setyo Pambudi
@@ -801,8 +807,18 @@ export default function Home() {
       </main>
 
       {/* FOOTER */}
-      <footer className="border-t border-neutral-900 py-8 px-4 text-center text-xs text-neutral-500 flex flex-col sm:flex-row items-center justify-between gap-4 max-w-5xl mx-auto">
-        <p>© 2026 Setyo Pambudi. Built with Next.js & Tailwind CSS.</p>
+      <footer className="border-t border-neutral-900 py-8 px-4 text-xs text-neutral-500 flex flex-col sm:flex-row items-center justify-between gap-4 max-w-5xl mx-auto">
+        <div className="flex items-center gap-3">
+          <div className="relative h-6 w-12 flex items-center justify-center">
+            <Image
+              src="/logo.png"
+              alt="SP Logo"
+              fill
+              className="object-contain opacity-75 hover:opacity-100 transition-opacity"
+            />
+          </div>
+          <p>© 2026 Setyo Pambudi. Built with Next.js & Tailwind CSS.</p>
+        </div>
         <div className="flex items-center gap-5 text-neutral-400">
           <a
             href="https://www.linkedin.com/in/setyopambudi/"

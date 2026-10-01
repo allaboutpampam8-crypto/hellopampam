@@ -23,7 +23,12 @@ export const metadata: Metadata = {
     "Business Automation",
     "Internal Tools",
     "Solutions Builder"
-  ]
+  ],
+  icons: {
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/icon.png",
+  },
 };
 
 export default function RootLayout({

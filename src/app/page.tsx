@@ -76,19 +76,16 @@ export default function Home() {
       {/* Floating Navbar */}
       <header className="sticky top-4 z-40 max-w-5xl mx-auto px-4">
         <nav className="flex items-center justify-between px-5 sm:px-6 py-3 rounded-full border border-neutral-800/90 bg-neutral-900/80 backdrop-blur-xl shadow-xl shadow-black/50">
-          <a href="#" className="flex items-center gap-3 group">
-            <div className="relative h-7 w-14 sm:h-8 sm:w-16 flex items-center justify-center group-hover:scale-105 transition-transform">
+          <a href="#" className="flex items-center group py-0.5" aria-label="Setyo Pambudi Portfolio">
+            <div className="relative h-8 w-16 sm:h-9 sm:w-18 flex items-center justify-center group-hover:scale-105 transition-transform">
               <Image
                 src="/logo.png"
-                alt="SP - Setyo Pambudi Logo"
+                alt="SP Logo"
                 fill
                 className="object-contain"
                 priority
               />
             </div>
-            <span className="font-semibold text-sm tracking-tight text-neutral-200 group-hover:text-white transition-colors">
-              Setyo Pambudi
-            </span>
           </a>
 
           <div className="hidden sm:flex items-center gap-7 text-xs font-medium text-neutral-400">

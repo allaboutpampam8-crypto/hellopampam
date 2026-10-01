@@ -25,8 +25,8 @@ export const metadata: Metadata = {
     "Solutions Builder"
   ],
   icons: {
-    icon: "/icon.png?v=4",
-    apple: "/icon.png?v=4",
+    icon: "/icon.png?v=5",
+    apple: "/icon.png?v=5",
   },
 };
 
@@ -38,8 +38,8 @@ export default function RootLayout({
   return (
     <html lang="id" className="scroll-smooth dark">
       <head>
-        <link rel="icon" href="/icon.png?v=4" type="image/png" sizes="any" />
-        <link rel="apple-touch-icon" href="/icon.png?v=4" />
+        <link rel="icon" href="/icon.png?v=5" type="image/png" sizes="any" />
+        <link rel="apple-touch-icon" href="/icon.png?v=5" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-neutral-950 text-neutral-100 selection:bg-emerald-500 selection:text-black`}

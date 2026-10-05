@@ -16,6 +16,28 @@ export interface Project {
 
 export const PROJECTS: Project[] = [
   {
+    id: "lapor-payroll",
+    title: "Payroll Assistant & Intelligence System",
+    tagline: "Pusat Intelijen Penggajian & Otomasi Tiket Kendala 17.000+ Pegawai",
+    category: "enterprise",
+    categoryLabel: "Enterprise & Payroll Tech",
+    description:
+      "Platform operasional terpadu berbasis Web, PWA, dan Telegram Bot yang dirancang khusus sebagai pusat intelijen data dan rekonsiliasi payroll berskala besar (17.000+ karyawan). Menggabungkan sistem tiket kendala gaji, engine parsing Excel client-side berkecepatan tinggi dengan chunked batch upserting, serta asisten Telegram dua arah untuk pencarian instan slip gaji dan deteksi otomatis selisih gaji multi-periode.",
+    highlights: [
+      "Pemrosesan dan rekonsiliasi data hasil payroll skala besar (17.000+ pegawai per bulan)",
+      "Client-side Excel parsing & chunked batch upserting untuk mencegah serverless timeout",
+      "Asisten Telegram Bot interaktif dua arah (@AssistenPampamBot) untuk query instan slip & selisih gaji",
+      "Manajemen tiket kendala gaji (Open, Crosscheck, Close), tracking nominal selisih, & auto-export Excel",
+      "Indexing performa tinggi pada PostgreSQL Cloud (respon query <10ms untuk 100.000+ baris data)"
+    ],
+    techStack: ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS", "Supabase PostgreSQL", "Telegram Bot API", "SheetJS (XLSX)", "PWA"],
+    metrics: "17.000+ data gaji bulanan & <10ms query instan via Telegram Bot",
+    status: "In Production",
+    imageUrl: "/projects/lapor-payroll.png",
+    demoUrl: "#",
+    githubUrl: "https://github.com/allaboutpampam8-crypto/payroll-assistant"
+  },
+  {
     id: "hris-mobile",
     title: "Integrated HRIS & Employee Self-Service",
     tagline: "Sistem HRIS Terpadu dengan Aplikasi Mobile Karyawan",

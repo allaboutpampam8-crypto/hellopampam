@@ -26,7 +26,7 @@ export const PROJECTS: Project[] = [
     highlights: [
       "Pemrosesan dan rekonsiliasi data hasil payroll skala besar (17.000+ pegawai per bulan)",
       "Client-side Excel parsing & chunked batch upserting untuk mencegah serverless timeout",
-      "Asisten Telegram Bot interaktif dua arah (@AssistenPampamBot) untuk query instan slip & selisih gaji",
+      "Asisten Telegram Bot interaktif dua arah (Private Bot Channel) untuk query instan slip & komparasi selisih gaji",
       "Manajemen tiket kendala gaji (Open, Crosscheck, Close), tracking nominal selisih, & auto-export Excel",
       "Indexing performa tinggi pada PostgreSQL Cloud (respon query <10ms untuk 100.000+ baris data)"
     ],
@@ -34,8 +34,7 @@ export const PROJECTS: Project[] = [
     metrics: "17.000+ data gaji bulanan & <10ms query instan via Telegram Bot",
     status: "In Production",
     imageUrl: "/projects/lapor-payroll.png",
-    demoUrl: "#",
-    githubUrl: "https://github.com/allaboutpampam8-crypto/payroll-assistant"
+    demoUrl: "#"
   },
   {
     id: "hris-mobile",

@@ -395,7 +395,7 @@ export default function Home() {
                     <div className="relative flex-1 w-full bg-neutral-950 flex items-center justify-center overflow-hidden">
                       {project.imageUrl ? (
                         <Image
-                          src={`${project.imageUrl}?v=2`}
+                          src={`${project.imageUrl}?v=3`}
                           alt={project.title}
                           fill
                           unoptimized
@@ -542,7 +542,7 @@ export default function Home() {
               {activeProject.imageUrl && (
                 <div className="relative w-full aspect-[16/9] rounded-xl overflow-hidden border border-neutral-700/80 bg-neutral-950 shadow-inner">
                   <Image
-                    src={`${activeProject.imageUrl}?v=2`}
+                    src={`${activeProject.imageUrl}?v=3`}
                     alt={activeProject.title}
                     fill
                     unoptimized

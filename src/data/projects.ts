@@ -12,6 +12,7 @@ export interface Project {
   imageUrl?: string;
   demoUrl?: string;
   githubUrl?: string;
+  hidden?: boolean;
 }
 
 export const PROJECTS: Project[] = [
@@ -63,7 +64,8 @@ export const PROJECTS: Project[] = [
     techStack: ["React Native / Flutter", "Next.js Admin Portal", "TypeScript", "PostgreSQL", "Cloud Storage"],
     metrics: "Paperless HR operations & seamless mobile employee experience",
     status: "Coming Soon",
-    imageUrl: "/projects/hris.png"
+    imageUrl: "/projects/hris.png",
+    hidden: true
   },
   {
     id: "meetthink",

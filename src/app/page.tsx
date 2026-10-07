@@ -50,10 +50,12 @@ export default function Home() {
     };
   }, [activeProject]);
 
+  const visibleProjects = PROJECTS.filter((p) => !p.hidden);
+
   const filteredProjects =
     selectedCategory === "all"
-      ? PROJECTS
-      : PROJECTS.filter((p) => p.category === selectedCategory);
+      ? visibleProjects
+      : visibleProjects.filter((p) => p.category === selectedCategory);
 
   const categories = [
     { id: "all", label: "Semua Proyek" },

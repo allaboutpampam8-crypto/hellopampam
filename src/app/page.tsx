@@ -337,19 +337,35 @@ export default function Home() {
 
             {/* Filter Tabs (Horizontal Scrollable on Mobile) */}
             <div className="flex items-center gap-2 overflow-x-auto pb-2 md:pb-0 scrollbar-none w-full md:w-auto -mx-1 px-1">
-              {categories.map((cat) => (
-                <button
-                  key={cat.id}
-                  onClick={() => setSelectedCategory(cat.id)}
-                  className={`px-3.5 py-1.5 rounded-lg text-xs font-medium whitespace-nowrap transition-all shrink-0 ${
-                    selectedCategory === cat.id
-                      ? "bg-emerald-500 text-neutral-950 font-bold shadow-md shadow-emerald-500/20"
-                      : "bg-neutral-900 border border-neutral-800 text-neutral-400 hover:text-white hover:border-neutral-700"
-                  }`}
-                >
-                  {cat.label}
-                </button>
-              ))}
+              {categories.map((cat) => {
+                const count =
+                  cat.id === "all"
+                    ? visibleProjects.length
+                    : visibleProjects.filter((p) => p.category === cat.id).length;
+
+                return (
+                  <button
+                    key={cat.id}
+                    onClick={() => setSelectedCategory(cat.id)}
+                    className={`inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-medium whitespace-nowrap transition-all shrink-0 ${
+                      selectedCategory === cat.id
+                        ? "bg-emerald-500 text-neutral-950 font-bold shadow-md shadow-emerald-500/20"
+                        : "bg-neutral-900 border border-neutral-800 text-neutral-400 hover:text-white hover:border-neutral-700"
+                    }`}
+                  >
+                    <span>{cat.label}</span>
+                    <span
+                      className={`text-[10px] px-1.5 py-0.2 rounded-full ${
+                        selectedCategory === cat.id
+                          ? "bg-neutral-950/20 text-neutral-950 font-extrabold"
+                          : "bg-neutral-800/80 text-neutral-400"
+                      }`}
+                    >
+                      {count}
+                    </span>
+                  </button>
+                );
+              })}
             </div>
           </div>
 
